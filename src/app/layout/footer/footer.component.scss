@@ -1,0 +1,44 @@
+@import "../../../assets/styles/style";
+
+.footer {
+  position: relative;
+  padding: 2em 0 0.5em 0;
+  margin: 0 1em;
+  width: content-box;
+  & .list-bottom {
+    display: flex;
+    gap: 0.25em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    & .developed-for {
+      padding: 0.5em 0;
+    }
+    & .create-at {
+      padding: 0.1em 0;
+    }
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .footer {
+    margin: 0 3em;
+  }
+}
+@media screen and (min-width: $md) {
+  .footer {
+    margin: 0 3em;
+  }
+}
+@media screen and (min-width: $lg) {
+  .footer {
+    margin: 0 3em;
+  }
+}
+@media screen and (min-width: $lg) {
+  .footer {
+    margin: 0 3em;
+  }
+}

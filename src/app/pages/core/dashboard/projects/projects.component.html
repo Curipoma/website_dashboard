@@ -1,0 +1,16 @@
+<ul class="projects-list">
+  <li *ngFor="let project of projects; let indice = index" class="project-container">
+    <h1>{{indice + 1}}</h1>
+    <img [src]="project.urlCover" [alt]="project.fullName" class="project-url-cover">
+    <div class="project-content">
+      <h3>{{project.fullName}}</h3>
+      <span>{{project.abbreviatedName}}</span>
+      <small>{{project.description}}</small>
+      <a [href]="project.linkToProject" class="link-to-project">view project</a>
+      <span>{{project.publishedAt | date}}</span>
+      <span>{{project.workingTime}}</span>
+      <a [href]="project.sourceCode" class="source-code">view code</a>
+      <span>{{project.technologies}}</span>
+    </div>
+  </li>
+</ul>

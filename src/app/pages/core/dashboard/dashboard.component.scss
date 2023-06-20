@@ -1,0 +1,23 @@
+@import "./src/assets/styles/style";
+
+.components-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  & .about-me {
+    background: $color-secondary;
+    padding: 1em 1.5em;
+  }
+
+  & .projects {
+    background: $color-secondary;
+    padding: 1em 1.5em;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .components-container {
+    flex-direction: row;
+  }
+}

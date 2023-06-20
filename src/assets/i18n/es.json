@@ -1,0 +1,27 @@
+{
+  "me": {
+    "name": "Alvaro Curipoma",
+    "carer": "Desarrollador de software",
+    "description": "Soy una persona muy apasionada por mis creaciones, pienso que debemos desempeñar con calidad para siempre destacarnos ante los demás."
+  },
+  "project": {
+    "published-at": "Publicado En",
+    "working-time": "Tiempo de Trabajo",
+    "source-code": "Código Fuente"
+  },
+  "form-create-something": {
+    "title": "Creemos Algo Juntos",
+    "from": "De",
+    "to": "Para",
+    "message": "Mensaje"
+  },
+  "actions": {
+    "start": "Inicio"
+  },
+  "not-found": {
+    "message": "Extraviado"
+  },
+  "nav-links": {
+    "home": "Inicio"
+  }
+}

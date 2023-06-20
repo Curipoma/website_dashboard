@@ -1,0 +1,75 @@
+[
+  {
+    "fullName": "Emisión de Certificados",
+    "description": "Es un sistema que emite certificados a los que completan un curso en la fundación esquel",
+    "urlCover": "assets/images/projects/project-1.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": ["html", "javascript", "css", "laravel", "tailwind"],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "Cerificados Test"
+  },
+  {
+    "fullName": "Películas",
+    "description": "Verémos un listado de muchas películas",
+    "urlCover": "assets/images/projects/project-2.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": ["html", "javascript", "css", "react"],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "Films"
+  },
+  {
+    "fullName": "Aplicación móvil de música",
+    "description": "Pordremos reproducir la música de nuestro teléfono",
+    "urlCover": "assets/images/projects/project-3.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": ["dark", "flutter"],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "Music"
+  },
+  {
+    "fullName": "Sistema de inventario",
+    "description": "Sistema que ayuda al inventario de la fundación FAD",
+    "urlCover": "assets/images/projects/project-4.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "html",
+      "typescript",
+      "scss",
+      "boostrap",
+      "primeng",
+      "primeflex"
+    ],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "CoreSystem"
+  },
+  {
+    "fullName": "Aplicación web",
+    "description": "Es una Aplicación web",
+    "urlCover": "assets/images/projects/project-5.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": ["html", "js", "css"],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "Wa"
+  },
+  {
+    "fullName": "Aplicación web",
+    "description": "Es una Aplicación web",
+    "urlCover": "assets/images/projects/project-6.jpg",
+    "publishedAt": "2022-10-08 12:00:00.000000-00",
+    "workingTime": "2d",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": ["html", "js", "css"],
+    "linkToProject": "http://localhost:4200/#/",
+    "abbreviatedName": "Wa"
+  }
+]

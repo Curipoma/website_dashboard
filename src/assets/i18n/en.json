@@ -1,0 +1,27 @@
+{
+  "me": {
+    "name": "Alvaro Curipoma",
+    "carer": "Software Developer",
+    "description": "I am a person very passionate about my creations, I think we must perform with quality to always stand out from others."
+  },
+  "project": {
+    "published-at": "Published At",
+    "working-time": "Working Time",
+    "source-code": "Source Code"
+  },
+  "form-create-something": {
+    "title": "let's Create Something Together",
+    "from": "From",
+    "to": "To",
+    "message": "Message"
+  },
+  "actions": {
+    "start": "Start"
+  },
+  "not-found": {
+    "message": "Not Found"
+  },
+  "nav-links": {
+    "home": "Home"
+  }
+}

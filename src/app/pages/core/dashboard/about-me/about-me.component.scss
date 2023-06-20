@@ -1,0 +1,180 @@
+@import "./src/assets/styles/style";
+
+.about-me-container {
+  & .about-me {
+    position: relative;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+    padding: 1em 1em 0.5em 1em;
+    width: 100%;
+    & .content-left {
+      display: flex;
+      gap: 2.5em;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      z-index: 1;
+      & .my-name {
+        animation: typing 0.4s steps(20), blink 0.5s infinite step-end alternate;
+        font-size: 3em;
+        font-family: "HelveticaNeueMedium";
+        font-weight: bolder;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          $text--linear-color-1 0%,
+          $text--linear-color-2 100%
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        border-right: 0.05em solid $color-primary;
+        overflow: hidden;
+        margin: auto 0 auto auto;
+        max-height: 2.5em;
+        height: 100%;
+        width: 100%;
+      }
+      & .description {
+        display: flex;
+        gap: 0.5em;
+        flex-direction: column;
+        & .description-title {
+          font-family: "HelveticaNeueMedium";
+          text-align: center;
+        }
+        & .description-body-text {
+          text-align: center;
+        }
+        & .more-options-about-me {
+          visibility: visible;
+          display: flex;
+          gap: 1em;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 1em 0;
+          width: 100%;
+          & .github-icon {
+            width: 2em;
+          }
+          & .linkedin-icon {
+            width: 2em;
+          }
+          & .my-email {
+            position: relative;
+            padding: 0.25em 0.2em;
+            transition: all calc($transition - 0.1s);
+            z-index: 2;
+            &:after {
+              position: absolute;
+              background: $color-primary;
+              content: " ";
+              right: 0;
+              bottom: 0;
+              left: 0;
+              transition: all calc($transition - 0.1s);
+              height: 0.05em;
+              width: 0;
+              z-index: -1;
+            }
+            &:hover:after {
+              transition: all calc($transition - 0.1s);
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    & .me-photo {
+      transition: all calc($transition - 0.2s);
+      opacity: 0.9;
+      width: 100%;
+      z-index: 1;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .about-me-container {
+    & .about-me {
+      gap: 0.5em;
+      align-items: flex-end;
+      padding: 2em 2em 2.5em 2em;
+      width: 100%;
+      & .content-left {
+        width: 100%;
+        & .my-name {
+          font-size: 4em;
+          text-align: right;
+          width: 100%;
+        }
+        & .description {
+          & .description-title {
+            text-align: right;
+            width: 100%;
+          }
+          & .description-body-text {
+            text-align: right;
+            width: 100%;
+          }
+
+          & .more-options-about-me {
+            visibility: hidden;
+            display: none;
+            width: 100%;
+          }
+        }
+      }
+      & .me-photo {
+        width: content-box;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .about-me-container {
+    & .about-me {
+      gap: 2.5em;
+      padding: 4em 6em 1.5em 6em;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-end;
+      max-width: 80em;
+      width: 100%;
+      & .content-left {
+        gap: 4em;
+        width: 60%;
+        & .my-name {
+          font-size: 5em;
+        }
+        & .description {
+          gap: 1em;
+        }
+      }
+      & .me-photo {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

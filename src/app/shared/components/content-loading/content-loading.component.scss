@@ -1,0 +1,86 @@
+@import "../../../../assets/styles/style";
+
+.content-loading-1,
+.content-loading-2 {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+}
+
+.content-loading-1 {
+  background: $color-secondary;
+  animation: contentLoading1Animated 1.5s normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 100vw;
+  z-index: 20;
+  & .logo {
+    position: relative;
+    background-image: url("../../../../assets/images/icons/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 20em;
+    height: 100%;
+    max-width: 20em;
+    width: 100%;
+    &:before {
+      position: absolute;
+      content: " ";
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $shadow-color;
+      border-radius: 100%;
+      filter: blur(1em);
+      height: 1em;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+.content-loading-2 {
+  background: $color-primary;
+  animation: contentLoading2Animated 1.5s normal;
+  left: 100vw;
+  z-index: 19;
+}
+
+@keyframes contentLoading1Animated {
+  0% {
+    left: -100vw;
+    width: 100%;
+  }
+  40% {
+    left: 0;
+  }
+  45% {
+    left: 0;
+  }
+  100% {
+    left: 100vw;
+    width: 100%;
+  }
+}
+
+@keyframes contentLoading2Animated {
+  0% {
+    left: -100vw;
+    width: 100%;
+  }
+  40% {
+    left: 20vw;
+  }
+  45% {
+    left: -100vw;
+  }
+  100% {
+    left: 100vw;
+    width: 100%;
+  }
+}
