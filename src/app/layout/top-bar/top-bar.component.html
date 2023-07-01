@@ -2,7 +2,7 @@
   <div class="nav-hamburger">
     <div class="logo-container">
       <a [routerLink]="'/'">
-        <img class="logo" src="assets/images/icons/logo.svg" />
+        <img class="logo" src="assets/images/icons/logo.svg"/>
       </a>
     </div>
     <span id="hamburgerElement" class="hamburger-element">|||</span>
@@ -15,7 +15,7 @@
       </a>
       <ul class="languages-list">
         {{
-          currentLanguage.label
+        currentLanguage.label
         }}
         <div class="language-container">
           <li
@@ -52,7 +52,7 @@
   <!-- animated -->
   <div class="nav-top">
     <a [routerLink]="'/'" class="logo-container">
-      <img class="logo" src="assets/images/icons/logo.svg" />
+      <img class="logo" src="assets/images/icons/logo.svg"/>
     </a>
     <div class="nav-top-links">
       <a class="nav-top-link" routerLink="/">
@@ -61,7 +61,7 @@
     </div>
     <ul class="languages-list">
       {{
-        currentLanguage.label
+      currentLanguage.label
       }}
       <div class="language-container">
         <li *ngFor="let language of languages" (click)="useLanguage(language)">
@@ -73,6 +73,10 @@
     </ul>
   </div>
   <div class="nav-right">
+    <small class="text">
+      +593 993582075
+    </small>
+    <span class="link-separate">|</span>
     <a class="link" href="https://github.com/Curipoma/">
       <img
         class="nav-icon"
@@ -94,33 +98,8 @@
     <span class="line-vertical"></span>
   </div>
   <div class="nav-left">
-    <a class="link" href="mailto:alvarocuripoma@gmail.com">
-      <small class="nav-text">
-        <small class="nav-text-item">a</small>
-        <small class="nav-text-item">l</small>
-        <small class="nav-text-item">v</small>
-        <small class="nav-text-item">a</small>
-        <small class="nav-text-item">r</small>
-        <small class="nav-text-item">o</small>
-        <small class="nav-text-item">c</small>
-        <small class="nav-text-item">u</small>
-        <small class="nav-text-item">r</small>
-        <small class="nav-text-item">i</small>
-        <small class="nav-text-item">p</small>
-        <small class="nav-text-item">o</small>
-        <small class="nav-text-item">m</small>
-        <small class="nav-text-item">a</small>
-        <small class="nav-text-item">@</small>
-        <small class="nav-text-item">g</small>
-        <small class="nav-text-item">m</small>
-        <small class="nav-text-item">a</small>
-        <small class="nav-text-item">i</small>
-        <small class="nav-text-item">l</small>
-        <small class="nav-text-item">.</small>
-        <small class="nav-text-item">c</small>
-        <small class="nav-text-item">o</small>
-        <small class="nav-text-item">m</small>
-      </small>
+    <a class="text" href="mailto:alvarocuripoma@gmail.com">
+      alvarocuripoma@gmail.com
     </a>
     <span class="line-vertical"></span>
   </div>

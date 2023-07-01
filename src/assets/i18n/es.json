@@ -1,8 +1,12 @@
 {
+  "titles": {
+    "projects": "Creaciones",
+    "contact": "Trabajemos juntos"
+  },
   "me": {
     "name": "Alvaro Curipoma",
     "carer": "Desarrollador de software",
-    "description": "Soy una persona muy apasionada por mis creaciones, pienso que debemos desempeñar con calidad para siempre destacarnos ante los demás."
+    "description": "Soy una persona muy apasionada por mis creaciones, pienso que debemos desempeñar con calidad para siempre destacarnos ante los demás. Graduado en Desarrollador de software, realizo proyectos desde el 2020, he estado presente desarrollando proyectos reales."
   },
   "project": {
     "published-at": "Publicado En",

@@ -1,11 +1,3 @@
-<div class="components-container">
-  <a class="about-me" [routerLink]="dashboardRouteConsts.aboutMe" [state]="{loadAnimate: true}">
-    about me
-  </a>
-  <a class="projects" [routerLink]="dashboardRouteConsts.projects" [state]="{loadAnimate: true}">
-    projects
-  </a>
-</div>
 <div *ngIf="isRender()" [@routeAnimations]="getRouteAnimationData()">
   <router-outlet></router-outlet>
 </div>

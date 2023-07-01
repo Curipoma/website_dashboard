@@ -1,168 +1,197 @@
 @import "./src/assets/styles/style";
 
-.about-me-container {
-  & .about-me {
-    position: relative;
+.about-me {
+  position: relative;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  padding: 1em 1em 5em 1em;
+  width: 100%;
+
+  & .content-left {
     display: flex;
-    gap: 0;
+    gap: 2.5em;
     flex-direction: column;
-    align-items: center;
-    margin: auto;
-    box-sizing: border-box;
-    border-radius: $border-radius;
-    padding: 1em 1em 0.5em 1em;
     width: 100%;
-    & .content-left {
-      display: flex;
-      gap: 2.5em;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      z-index: 1;
-      & .my-name {
-        animation: typing 0.4s steps(20), blink 0.5s infinite step-end alternate;
-        font-size: 3em;
-        font-family: "HelveticaNeueMedium";
-        font-weight: bolder;
-        text-align: center;
-        background: linear-gradient(
+    z-index: 1;
+
+    & .my-name {
+      animation: typing 0.4s steps(20), blink 0.5s infinite step-end alternate;
+      font-size: 3em;
+      font-family: "HelveticaNeueMedium";
+      font-weight: bolder;
+      text-align: center;
+      background: linear-gradient(
           135deg,
           $text--linear-color-1 0%,
           $text--linear-color-2 100%
-        );
-        -webkit-background-clip: text;
-        color: transparent;
-        border-right: 0.05em solid $color-primary;
-        overflow: hidden;
-        margin: auto 0 auto auto;
-        max-height: 2.5em;
-        height: 100%;
-        width: 100%;
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+      border-right: 0.05em solid $color-primary;
+      overflow: hidden;
+      margin: auto 0 auto auto;
+      max-height: 2.5em;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    & .description {
+      display: flex;
+      gap: 0.5em;
+      flex-direction: column;
+
+      & .description-title {
+        font-family: "HelveticaNeueMedium";
+        text-align: center;
       }
-      & .description {
+
+      & .description-body-text {
+        text-align: center;
+      }
+
+      & .more-options-about-me {
+        visibility: visible;
         display: flex;
-        gap: 0.5em;
-        flex-direction: column;
-        & .description-title {
-          font-family: "HelveticaNeueMedium";
-          text-align: center;
+        gap: 1em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0;
+        width: 100%;
+
+        & .github-icon {
+          width: 2em;
         }
-        & .description-body-text {
-          text-align: center;
+
+        & .linkedin-icon {
+          width: 2em;
         }
-        & .more-options-about-me {
-          visibility: visible;
-          display: flex;
-          gap: 1em;
-          flex-direction: row;
-          align-items: center;
-          justify-content: flex-end;
-          padding: 1em 0;
-          width: 100%;
-          & .github-icon {
-            width: 2em;
-          }
-          & .linkedin-icon {
-            width: 2em;
-          }
-          & .my-email {
-            position: relative;
-            padding: 0.25em 0.2em;
+
+        & .my-email {
+          position: relative;
+          padding: 0.25em 0.2em;
+          transition: all calc($transition - 0.1s);
+          z-index: 2;
+
+          &:after {
+            position: absolute;
+            background: $color-primary;
+            content: " ";
+            right: 0;
+            bottom: 0;
+            left: 0;
             transition: all calc($transition - 0.1s);
-            z-index: 2;
-            &:after {
-              position: absolute;
-              background: $color-primary;
-              content: " ";
-              right: 0;
-              bottom: 0;
-              left: 0;
-              transition: all calc($transition - 0.1s);
-              height: 0.05em;
-              width: 0;
-              z-index: -1;
-            }
-            &:hover:after {
-              transition: all calc($transition - 0.1s);
-              width: 100%;
-            }
+            height: 0.05em;
+            width: 0;
+            z-index: -1;
+          }
+
+          &:hover:after {
+            transition: all calc($transition - 0.1s);
+            width: 100%;
           }
         }
       }
     }
-    & .me-photo {
-      transition: all calc($transition - 0.2s);
-      opacity: 0.9;
-      width: 100%;
-      z-index: 1;
-      &:hover {
-        opacity: 1;
-      }
+  }
+
+  & .me-photo {
+    transition: all calc($transition - 0.2s);
+    opacity: 0.9;
+    width: 100%;
+    z-index: 1;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
 
 @media screen and (min-width: $sm) {
-  .about-me-container {
-    & .about-me {
-      gap: 0.5em;
-      align-items: flex-end;
-      padding: 2em 2em 2.5em 2em;
+  .about-me {
+    gap: 0.5em;
+    align-items: flex-start;
+    width: 100%;
+
+    & .content-left {
       width: 100%;
-      & .content-left {
+
+      & .my-name {
+        text-align: left;
         width: 100%;
-        & .my-name {
-          font-size: 4em;
-          text-align: right;
+      }
+
+      & .description {
+        & .description-title {
+          text-align: left;
           width: 100%;
         }
-        & .description {
-          & .description-title {
-            text-align: right;
-            width: 100%;
-          }
-          & .description-body-text {
-            text-align: right;
-            width: 100%;
-          }
 
-          & .more-options-about-me {
-            visibility: hidden;
-            display: none;
-            width: 100%;
-          }
+        & .description-body-text {
+          text-align: left;
+          width: 100%;
+        }
+
+        & .more-options-about-me {
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
         }
       }
-      & .me-photo {
-        width: content-box;
-      }
+    }
+
+    & .me-photo {
+      width: 75vw;
     }
   }
 }
 
 @media screen and (min-width: $xl) {
-  .about-me-container {
-    & .about-me {
-      gap: 2.5em;
-      padding: 4em 6em 1.5em 6em;
-      flex-direction: row;
-      align-items: flex-start;
-      align-content: flex-end;
-      max-width: 80em;
-      width: 100%;
-      & .content-left {
-        gap: 4em;
-        width: 60%;
-        & .my-name {
-          font-size: 5em;
+  .about-me {
+    gap: 2.5em;
+    padding: 4em 6em 10em 6em;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    min-height: 90vh;
+    max-width: 80em;
+    width: 100%;
+
+    & .content-left {
+      gap: 4em;
+      width: 60%;
+
+      & .my-name {
+        padding-left: 20rem;
+        text-align: right;
+      }
+
+      & .description {
+        gap: 1em;
+
+        & .description-title {
+          text-align: right;
         }
-        & .description {
-          gap: 1em;
+
+        & .description-body-text {
+          text-align: right;
+        }
+
+        & .more-options-about-me {
+          visibility: hidden;
+          display: none;
+          width: 100%;
         }
       }
-      & .me-photo {
-        width: 40%;
-      }
+    }
+
+    & .me-photo {
+      width: 40%;
     }
   }
 }
@@ -176,5 +205,93 @@
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 5rem 0;
+  font-family: "HelveticaNeueMedium";
+}
+
+.projects-list {
+  display: grid;
+  gap: 7rem 2rem;
+  padding: 0 1em;
+  grid-template-columns: repeat(1, 100%);
+
+  & .project-container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    opacity: 0.8;
+    transition: ($transition - 0.2s);
+    width: 100%;
+
+    &:hover {
+      opacity: 1;
+      transition: ($transition - 0.2s);
+    }
+
+    & .project-title {
+      font-family: "HelveticaNeueMedium";
+    }
+
+    & .project-url-cover {
+      object-fit: revert;
+      height: 15rem;
+      width: 15rem;
+    }
+
+    & .project-content {
+      display: flex;
+      gap: 0.1rem;
+      flex-direction: column;
+
+      & .project-content-title {
+        font-family: "HelveticaNeueMedium";
+      }
+
+      & .link-to-project {
+        text-decoration: underline;
+        transition: ($transition - 0.2s);
+
+        &:hover {
+          text-decoration-color: $text--linear-color-1;
+          transition: ($transition - 0.2s);
+        }
+      }
+
+      & .source-code {
+        text-decoration: underline;
+        transition: ($transition - 0.2s);
+
+        &:hover {
+          text-decoration-color: $text--linear-color-1;
+          transition: ($transition - 0.2s);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .projects-list {
+    & .project-container {
+      padding: 0;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .projects-list {
+    grid-template-columns: repeat(2, calc(100% / 2));
+  }
+}
+
+@media screen and (min-width: $xl2) {
+  .projects-list {
+    grid-template-columns: repeat(3, calc(100% / 3));
   }
 }

@@ -3,7 +3,7 @@
     <div class="content-left">
       <h1 class="my-name">{{ "me.name" | translate }}</h1>
       <div class="description">
-        <h2 class="description-title">{{ "me.carer" | translate }}</h2>
+        <h3 class="description-title">{{ "me.carer" | translate }}</h3>
         <p class="description-body-text">
           {{ "me.description" | translate }}
         </p>
@@ -31,3 +31,21 @@
     <img class="me-photo" src="assets/images/icons/me.png"/>
   </div>
 </div>
+<h1 class="title">{{'titles.projects'|translate}}</h1>
+<ul class="projects-list">
+  <li *ngFor="let project of projects; let indice = index" class="project-container">
+    <h1 class="project-title">{{indice + 1}}</h1>
+    <img [src]="project.urlCover" [alt]="project.fullName" class="project-url-cover">
+    <div class="project-content">
+      <h4 class="project-content-title">{{project.fullName}}</h4>
+      <span>{{project.abbreviatedName}}</span>
+      <small>{{project.description}}</small>
+      <a [href]="project.linkToProject" class="link-to-project">view project</a>
+      <span>{{project.publishedAt | date}}</span>
+      <span>{{project.workingTime}}</span>
+      <a [href]="project.sourceCode" class="source-code">view code</a>
+      <span>{{project.technologies}}</span>
+    </div>
+  </li>
+</ul>
+<h1 class="title">{{'titles.contact'|translate}}</h1>

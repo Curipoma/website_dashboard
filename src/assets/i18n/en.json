@@ -1,8 +1,12 @@
 {
+  "titles": {
+    "projects": "Creations",
+    "contact": "let's work together"
+  },
   "me": {
     "name": "Alvaro Curipoma",
     "carer": "Software Developer",
-    "description": "I am a person very passionate about my creations, I think we must perform with quality to always stand out from others."
+    "description": "I am a person who is very passionate about my creations, I think that we must perform with quality to always stand out from the rest. Graduated in Software Developer, I have been carrying out projects since 2020, I have been present developing real projects."
   },
   "project": {
     "published-at": "Published At",
