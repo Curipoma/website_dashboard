@@ -1,0 +1,59 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg-color-gradiant: linear-gradient(
+        135deg,
+        #121d1f,
+        #1f1212
+    );
+    --primary-bg-color: #728bcb;
+    --secondary-bg-color: rgb(18, 21, 31);
+    --primary-text-color: #e1d2ff;
+    --secondary-text-color: #beb3da;
+    --primary-color: #00c2ff;
+    --secondary-color: #d673ff;
+    --shadow-color: rgba(0, 0, 0, 1);
+    --border-color: rgba(165, 165, 203, 0.5);
+    --btn-back-bg: rgb(10, 111, 157);
+    --btn-before-bg-color: rgb(56, 70, 100);
+    --line: #62747c;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-bg-color-gradiant: linear-gradient(
+        135deg,
+        #edfbff,
+        #ffeded
+    );
+    --primary-bg-color: #bfcfff;
+    --secondary-bg-color: rgb(189, 205, 255);
+    --primary-text-color: #355C7D;
+    --secondary-text-color: #657c91;
+    --primary-color: #11b1de;
+    --secondary-color: #ff7373;
+    --shadow-color: rgb(66, 66, 66);
+    --border-color: rgba(165, 165, 203, 0.5);
+    --btn-back-bg: rgb(10, 111, 157);
+    --btn-before-bg-color: rgb(56, 70, 100);
+    --line: #62747c;
+  }
+}
+
+$primary-bg-color-gradiant: var(--primary-bg-color-gradiant);
+
+$primary-bg-color: #728bcb;
+$secondary-bg-color: var(--secondary-bg-color);
+
+$primary-text-color: var(--primary-text-color);
+$secondary-text-color: var(--secondary-text-color);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+
+$shadow-color: var(--shadow-color);
+$border-color: var(--border-color);
+
+$btn-back-bg: var(--btn-back-bg);
+$btn-before-bg-color: var(--btn-before-bg-color);
+
+$line: var(--line);

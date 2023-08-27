@@ -1,4 +1,4 @@
-@import "./assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 * {
   border: none;
@@ -6,9 +6,10 @@
   margin: 0;
   outline: none;
   padding: 0;
-  color: $text-color;
-  font-family: "Segoe UI Symbol";
+  color: $primary-text-color;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
+  font-style: normal;
   box-sizing: border-box;
   word-break: break-word;
   scroll-behavior: smooth;
@@ -18,6 +19,27 @@
 body {
   font-size: 16px;
   position: relative;
-  background: $bg-color;
+  background: $secondary-bg-color;
+  background: $primary-bg-color-gradiant;
   overflow: hidden;
+}
+
+.text-full-color {
+  background: linear-gradient(
+      90deg,
+      $primary-color 0%,
+      $secondary-color 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.line {
+  background: linear-gradient(
+      90deg,
+      $primary-color 0%,
+      $secondary-color 100%
+  );
+  height: 0.1rem;
+  width: 100%;
 }

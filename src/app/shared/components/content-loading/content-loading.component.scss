@@ -1,4 +1,4 @@
-@import "../../../../assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 .content-loading-1,
 .content-loading-2 {
@@ -12,7 +12,7 @@
 }
 
 .content-loading-1 {
-  background: $color-secondary;
+  background: $secondary-bg-color;
   animation: contentLoading1Animated 1.5s normal;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@
   }
 }
 .content-loading-2 {
-  background: $color-primary;
+  background: $primary-bg-color;
   animation: contentLoading2Animated 1.5s normal;
   left: 100vw;
   z-index: 19;

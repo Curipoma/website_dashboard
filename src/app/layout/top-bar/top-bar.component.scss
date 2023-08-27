@@ -1,4 +1,4 @@
-@import "./src/assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 .nav-container {
   position: relative;
@@ -58,7 +58,7 @@
   }
 
   & .nav-hamburger-content {
-    background: $bg-color;
+    background: $secondary-bg-color;
     position: fixed;
     display: flex;
     gap: 0;
@@ -107,7 +107,7 @@
         &:before {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-before-bg-color;
+          background: $btn-before-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-300%);
           right: 0;
@@ -121,7 +121,7 @@
         &:after {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-after-bg-color;
+          background: $primary-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-105%);
           right: 0;
@@ -159,13 +159,13 @@
         z-index: 2;
 
         & .language {
-          background: $color-secondary;
+          background: $secondary-bg-color;
           display: block;
           padding: 0.25em 0.5em;
           width: 100%;
 
           &:hover {
-            background: $color-primary;
+            background: $primary-bg-color;
             cursor: pointer;
           }
         }
@@ -201,7 +201,7 @@
         &:before {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-before-bg-color;
+          background: $btn-before-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-300%);
           right: 0;
@@ -215,7 +215,7 @@
         &:after {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-after-bg-color;
+          background: $primary-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-105%);
           right: 0;
@@ -283,7 +283,7 @@
         &:before {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-before-bg-color;
+          background: $btn-before-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-300%);
           right: 0;
@@ -297,7 +297,7 @@
         &:after {
           position: absolute;
           content: " ";
-          background: $nav-top-btn-after-bg-color;
+          background: $primary-bg-color;
           transition: all calc($transition + 0.3s) ease-in-out;
           transform: translateX(-105%);
           right: 0;
@@ -335,14 +335,14 @@
         z-index: 2;
 
         & .language {
-          background: $color-secondary;
+          background: $secondary-bg-color;
           display: block;
           padding: 0.25em 0.5em;
           transition: all calc($transition - 0.25s) ease-in-out;
           width: 100%;
 
           &:hover {
-            background: $color-primary;
+            background: $primary-bg-color;
             cursor: pointer;
           }
         }
@@ -412,7 +412,7 @@
     & .line-vertical {
       height: 5em;
       width: 0.05em;
-      background: $text-color;
+      background: $primary-text-color;
       margin: 1em auto 0 auto;
     }
   }
@@ -480,7 +480,7 @@
     & .line-vertical {
       height: 5em;
       width: 0.05em;
-      background: $text-color;
+      background: $primary-text-color;
       margin: 1em auto 0 auto;
     }
   }

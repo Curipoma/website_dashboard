@@ -1,44 +1,45 @@
-@import "../../../assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 .footer {
   position: relative;
-  padding: 2em 0 0.5em 0;
-  margin: 0 1em;
+  padding: 10rem 0 5rem 0;
+  margin: 0 1rem;
   width: content-box;
   & .list-bottom {
     display: flex;
-    gap: 0.25em;
+    gap: 0.25rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     z-index: 1;
     & .developed-for {
-      padding: 0.5em 0;
+      padding: 0.5rem 0;
+      width: fit-content;
     }
     & .create-at {
-      padding: 0.1em 0;
+      padding: 0.1rem 0;
     }
   }
 }
 
 @media screen and (min-width: $sm) {
   .footer {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media screen and (min-width: $md) {
   .footer {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media screen and (min-width: $lg) {
   .footer {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media screen and (min-width: $lg) {
   .footer {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }

@@ -1,51 +1,60 @@
 <div class="about-me-container">
   <div class="about-me">
-    <div class="content-left">
-      <h1 class="my-name">{{ "me.name" | translate }}</h1>
-      <div class="description">
-        <h3 class="description-title">{{ "me.carer" | translate }}</h3>
-        <p class="description-body-text">
-          {{ "me.description" | translate }}
-        </p>
-        <div class="more-options-about-me">
-          <a href="https://github.com/Curipoma/">
-            <img
-              class="github-icon"
-              src="assets/images/icons/github-64.svg"
-              alt="github"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/alvaro-curipoma-713353229/">
-            <img
-              class="linkedin-icon"
-              src="assets/images/icons/linkedin-96.svg"
-              alt="linkedin"
-            />
-          </a>
-          <a href="mailto:alvarocuripoma@gmail.com" class="my-email">
-            <small> alvarocuripoma@gmail.com </small>
+    <h1 class="title">About me</h1>
+    <div class="name">
+      <h3 class="my-name text-full-color">{{ "me.name" | translate }}</h3>
+      <small>{{ "me.carer" | translate }}</small>
+    </div>
+    <div class="description">
+      <img class="me-photo" src="assets/images/icons/me.png" alt="me"/>
+      <p class="description-text">
+        {{ "me.description" | translate }}
+      </p>
+    </div>
+    <div class="social-networks">
+      <a href="mailto:alvarocuripoma@gmail.com" class="my-email">
+        <small> alvarocuripoma@gmail.com </small>
+      </a>
+      <a href="https://github.com/Curipoma/">
+        <img
+          class="github-icon"
+          src="assets/images/icons/github-64.svg"
+          alt="github"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/alvaro-curipoma-713353229/">
+        <img
+          class="linkedin-icon"
+          src="assets/images/icons/linkedin-96.svg"
+          alt="linkedin"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="projects">
+    <h1 class="title">{{'titles.projects'|translate}}</h1>
+    <ul class="projects-list">
+      <li *ngFor="let project of projects; let indice = index" class="project-container">
+        <div class="project-content-left">
+          <h1 class="project-title">{{indice + 1}}</h1>
+          <img [src]="project.urlCover" [alt]="project.fullName" class="project-img">
+        </div>
+        <div class="project-content-right">
+          <h3 class="project-content-title">{{project.fullName}}</h3>
+          <small class="project-content-description">{{project.description}}</small>
+          <div class="technologies">
+            <small class="technology" *ngFor="let technology of project.technologies">{{technology}}</small>
+          </div>
+          <a [href]="project.sourceCode">
+            <small class="source-code">
+              view code
+            </small>
           </a>
         </div>
-      </div>
-    </div>
-    <img class="me-photo" src="assets/images/icons/me.png"/>
+      </li>
+    </ul>
+  </div>
+  <div class="contact">
+    <h1 class="title">{{'titles.contact'|translate}}</h1>
   </div>
 </div>
-<h1 class="title">{{'titles.projects'|translate}}</h1>
-<ul class="projects-list">
-  <li *ngFor="let project of projects; let indice = index" class="project-container">
-    <h1 class="project-title">{{indice + 1}}</h1>
-    <img [src]="project.urlCover" [alt]="project.fullName" class="project-url-cover">
-    <div class="project-content">
-      <h4 class="project-content-title">{{project.fullName}}</h4>
-      <span>{{project.abbreviatedName}}</span>
-      <small>{{project.description}}</small>
-      <a [href]="project.linkToProject" class="link-to-project">view project</a>
-      <span>{{project.publishedAt | date}}</span>
-      <span>{{project.workingTime}}</span>
-      <a [href]="project.sourceCode" class="source-code">view code</a>
-      <span>{{project.technologies}}</span>
-    </div>
-  </li>
-</ul>
-<h1 class="title">{{'titles.contact'|translate}}</h1>

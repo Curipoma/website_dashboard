@@ -1,297 +1,151 @@
-@import "./src/assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
-.about-me {
-  position: relative;
+.about-me-container {
   display: flex;
-  gap: 0;
   flex-direction: column;
+  gap: 5rem;
   margin: auto;
-  box-sizing: border-box;
-  border-radius: $border-radius;
-  padding: 1em 1em 5em 1em;
+  max-width: $xl;
   width: 100%;
 
-  & .content-left {
+  & .about-me {
     display: flex;
-    gap: 2.5em;
     flex-direction: column;
     width: 100%;
-    z-index: 1;
 
-    & .my-name {
-      animation: typing 0.4s steps(20), blink 0.5s infinite step-end alternate;
-      font-size: 3em;
-      font-family: "HelveticaNeueMedium";
-      font-weight: bolder;
+    & .title {
       text-align: center;
-      background: linear-gradient(
-          135deg,
-          $text--linear-color-1 0%,
-          $text--linear-color-2 100%
-      );
-      -webkit-background-clip: text;
-      color: transparent;
-      border-right: 0.05em solid $color-primary;
-      overflow: hidden;
-      margin: auto 0 auto auto;
-      max-height: 2.5em;
-      padding: 0;
-      height: 100%;
-      width: 100%;
+      padding-bottom: 5rem;
+    }
+
+    & .name {
+      padding: 0 0 1rem 0;
+
+      & .my-name {
+        text-align: left;
+        width: fit-content;
+      }
     }
 
     & .description {
       display: flex;
-      gap: 0.5em;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      & .me-photo {
+        border-radius: 100%;
+        border: $border-width solid $primary-text-color;
+        border-image-slice: 1;
+        height: 5rem;
+      }
+
+      & .description-text {
+        text-align: left;
+      }
+    }
+
+    & .social-networks {
+      display: none;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+
+      & .github-icon {
+        height: 2rem;
+      }
+
+      & .linkedin-icon {
+        height: 2rem;
+      }
+    }
+  }
+
+  & .projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .title {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
+    & .projects-list {
+      display: flex;
       flex-direction: column;
-
-      & .description-title {
-        font-family: "HelveticaNeueMedium";
-        text-align: center;
-      }
-
-      & .description-body-text {
-        text-align: center;
-      }
-
-      & .more-options-about-me {
-        visibility: visible;
-        display: flex;
-        gap: 1em;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 1em 0;
-        width: 100%;
-
-        & .github-icon {
-          width: 2em;
-        }
-
-        & .linkedin-icon {
-          width: 2em;
-        }
-
-        & .my-email {
-          position: relative;
-          padding: 0.25em 0.2em;
-          transition: all calc($transition - 0.1s);
-          z-index: 2;
-
-          &:after {
-            position: absolute;
-            background: $color-primary;
-            content: " ";
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transition: all calc($transition - 0.1s);
-            height: 0.05em;
-            width: 0;
-            z-index: -1;
-          }
-
-          &:hover:after {
-            transition: all calc($transition - 0.1s);
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-
-  & .me-photo {
-    transition: all calc($transition - 0.2s);
-    opacity: 0.9;
-    width: 100%;
-    z-index: 1;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-@media screen and (min-width: $sm) {
-  .about-me {
-    gap: 0.5em;
-    align-items: flex-start;
-    width: 100%;
-
-    & .content-left {
+      gap: 3rem;
       width: 100%;
 
-      & .my-name {
-        text-align: left;
+      & .project-container {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-      }
 
-      & .description {
-        & .description-title {
-          text-align: left;
-          width: 100%;
-        }
-
-        & .description-body-text {
-          text-align: left;
-          width: 100%;
-        }
-
-        & .more-options-about-me {
+        & .project-content-left {
+          display: flex;
           flex-direction: row;
-          align-items: center;
-          justify-content: flex-start;
-        }
-      }
-    }
+          gap: 2rem;
+          padding-right: 2rem;
 
-    & .me-photo {
-      width: 75vw;
-    }
-  }
-}
+          & .project-title {
+            font-size: 3rem;
+          }
 
-@media screen and (min-width: $xl) {
-  .about-me {
-    gap: 2.5em;
-    padding: 4em 6em 10em 6em;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    min-height: 90vh;
-    max-width: 80em;
-    width: 100%;
-
-    & .content-left {
-      gap: 4em;
-      width: 60%;
-
-      & .my-name {
-        padding-left: 20rem;
-        text-align: right;
-      }
-
-      & .description {
-        gap: 1em;
-
-        & .description-title {
-          text-align: right;
+          & .project-img {
+            width: 20rem;
+            height: 10rem;
+          }
         }
 
-        & .description-body-text {
-          text-align: right;
-        }
-
-        & .more-options-about-me {
-          visibility: hidden;
-          display: none;
+        & .project-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
           width: 100%;
-        }
-      }
-    }
 
-    & .me-photo {
-      width: 40%;
-    }
-  }
-}
+          & .project-content-title {
+          }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
+          & .project-content-description {
+            color: $secondary-text-color;
+          }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
+          & .source-code {
+            color: $primary-color;
+          }
 
-.title {
-  text-align: center;
-  padding: 5rem 0;
-  font-family: "HelveticaNeueMedium";
-}
+          & .technologies {
+            display: flex;
+            gap: 1rem;
 
-.projects-list {
-  display: grid;
-  gap: 7rem 2rem;
-  padding: 0 1em;
-  grid-template-columns: repeat(1, 100%);
-
-  & .project-container {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    opacity: 0.8;
-    transition: ($transition - 0.2s);
-    width: 100%;
-
-    &:hover {
-      opacity: 1;
-      transition: ($transition - 0.2s);
-    }
-
-    & .project-title {
-      font-family: "HelveticaNeueMedium";
-    }
-
-    & .project-url-cover {
-      object-fit: revert;
-      height: 15rem;
-      width: 15rem;
-    }
-
-    & .project-content {
-      display: flex;
-      gap: 0.1rem;
-      flex-direction: column;
-
-      & .project-content-title {
-        font-family: "HelveticaNeueMedium";
-      }
-
-      & .link-to-project {
-        text-decoration: underline;
-        transition: ($transition - 0.2s);
-
-        &:hover {
-          text-decoration-color: $text--linear-color-1;
-          transition: ($transition - 0.2s);
-        }
-      }
-
-      & .source-code {
-        text-decoration: underline;
-        transition: ($transition - 0.2s);
-
-        &:hover {
-          text-decoration-color: $text--linear-color-1;
-          transition: ($transition - 0.2s);
+            & .technology {
+              display: inline-flex;
+              border: $border-width solid $secondary-text-color;
+              border-radius: $border-radius;
+              padding: 0 0.5rem;
+            }
+          }
         }
       }
     }
   }
-}
 
-@media screen and (min-width: $sm) {
-  .projects-list {
-    & .project-container {
-      padding: 0;
-      flex-direction: row;
+  & .contact {
+    & .title {
+      text-align: center;
+      padding-bottom: 5rem;
     }
   }
 }
 
-@media screen and (min-width: $lg) {
-  .projects-list {
-    grid-template-columns: repeat(2, calc(100% / 2));
-  }
-}
-
-@media screen and (min-width: $xl2) {
-  .projects-list {
-    grid-template-columns: repeat(3, calc(100% / 3));
+@media screen and (max-width: $xl) {
+  .about-me-container {
+    .about-me {
+      & .social-networks {
+        display: flex;
+      }
+    }
   }
 }

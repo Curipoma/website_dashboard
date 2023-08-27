@@ -1,8 +1,9 @@
-@import "./src/assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 .loading {
   position: relative;
-  background: $color-secondary;
+  background: $secondary-bg-color;
+  background: $primary-bg-color-gradiant;
   animation: finishAnimate 2s ease-in-out;
   opacity: 0;
   display: flex;
@@ -13,6 +14,7 @@
   min-height: 100vh;
   height: 100%;
   z-index: 10;
+
   & .loading-icon {
     position: relative;
     margin: 0 auto;

@@ -1,4 +1,4 @@
-@import "./src/assets/styles/style";
+@import "./src/assets/theme/inspired/theme";
 
 .components-container {
   display: flex;
@@ -6,12 +6,12 @@
   padding: 2rem 0;
 
   & .about-me {
-    background: $color-secondary;
+    background: $secondary-bg-color;
     padding: 1em 1.5em;
   }
 
   & .projects {
-    background: $color-secondary;
+    background: $secondary-bg-color;
     padding: 1em 1.5em;
   }
 }
