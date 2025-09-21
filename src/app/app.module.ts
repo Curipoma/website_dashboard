@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {TopBarComponent} from './layout/top-bar/top-bar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {BlankComponent} from './layout/blank/blank.component';
 import {MainComponent} from './layout/main/main.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
@@ -20,41 +20,35 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    TopBarComponent,
-    BlankComponent,
-    MainComponent,
-    LoadingInitComponent,
-    BackgroundComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'es',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-    AppRoutingModule,
-    HttpClientModule,
-  ],
-  exports: [
-    TranslateModule,
-  ],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
-    HttpInterceptorProviders,
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        FooterComponent,
+        TopBarComponent,
+        BlankComponent,
+        MainComponent,
+        LoadingInitComponent,
+        BackgroundComponent,
+    ],
+    exports: [
+        TranslateModule,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'es',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        AppRoutingModule], providers: [
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy,
+        },
+        HttpInterceptorProviders,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {
 }
