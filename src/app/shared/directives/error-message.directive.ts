@@ -3,7 +3,8 @@ import {ValidationErrors} from '@angular/forms';
 import {MessageService} from "@services/message.service";
 
 @Directive({
-  selector: '[appErrorMessage]',
+    selector: '[appErrorMessage]',
+    standalone: false
 })
 export class ErrorMessageDirective {
   @Input() set touched(value: boolean) {

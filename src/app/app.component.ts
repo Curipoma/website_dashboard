@@ -4,16 +4,17 @@ import { ChildrenOutletContexts } from "@angular/router";
 import { routeAnimationsOpacity } from "./animations/routeAnimationsOpacity";
 
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <app-background></app-background>
 <!--    <div *ngIf="isRender()" [@routeAnimations]="getRouteAnimationData()">-->
       <router-outlet></router-outlet>
 <!--    </div>-->
   `,
-  animations: [
-    routeAnimationsOpacity,
-  ]
+    animations: [
+        routeAnimationsOpacity,
+    ],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   constructor(

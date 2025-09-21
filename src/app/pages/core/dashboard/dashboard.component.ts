@@ -5,12 +5,13 @@ import {ChildrenOutletContexts} from "@angular/router";
 import {routeAnimationsOpacity} from "../../../animations/routeAnimationsOpacity";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
-  animations: [
-    routeAnimationsOpacity,
-  ]
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
+    animations: [
+        routeAnimationsOpacity,
+    ],
+    standalone: false
 })
 
 export class DashboardComponent {
