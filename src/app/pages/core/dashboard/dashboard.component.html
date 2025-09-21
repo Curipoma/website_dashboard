@@ -1,3 +1,5 @@
-<div *ngIf="isRender()" [@routeAnimations]="getRouteAnimationData()">
-  <router-outlet></router-outlet>
-</div>
+@if (isRender()) {
+  <div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+  </div>
+}

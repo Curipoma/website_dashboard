@@ -20,41 +20,45 @@
           class="github-icon"
           src="assets/images/icons/github-64.svg"
           alt="github"
-        />
-      </a>
-      <a href="https://www.linkedin.com/in/alvaro-curipoma-713353229/">
-        <img
-          class="linkedin-icon"
-          src="assets/images/icons/linkedin-96.svg"
-          alt="linkedin"
-        />
-      </a>
-    </div>
-  </div>
-  <div class="projects">
-    <h1 class="title">{{'titles.projects'|translate}}</h1>
-    <ul class="projects-list">
-      <li *ngFor="let project of projects; let indice = index" class="project-container">
-        <div class="project-content-left">
-          <h1 class="project-title">{{indice + 1}}</h1>
-          <img [src]="project.urlCover" [alt]="project.fullName" class="project-img">
-        </div>
-        <div class="project-content-right">
-          <h3 class="project-content-title">{{project.fullName}}</h3>
-          <small class="project-content-description">{{project.description}}</small>
-          <div class="technologies">
-            <small class="technology" *ngFor="let technology of project.technologies">{{technology}}</small>
-          </div>
-          <a [href]="project.sourceCode">
-            <small class="source-code">
-              view code
-            </small>
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/alvaro-curipoma-713353229/">
+          <img
+            class="linkedin-icon"
+            src="assets/images/icons/linkedin-96.svg"
+            alt="linkedin"
+            />
           </a>
         </div>
-      </li>
-    </ul>
-  </div>
-  <div class="contact">
-    <h1 class="title">{{'titles.contact'|translate}}</h1>
-  </div>
-</div>
+      </div>
+      <div class="projects">
+        <h1 class="title">{{'titles.projects'|translate}}</h1>
+        <ul class="projects-list">
+          @for (project of projects; track project; let indice = $index) {
+            <li class="project-container">
+              <div class="project-content-left">
+                <h1 class="project-title">{{indice + 1}}</h1>
+                <img [src]="project.urlCover" [alt]="project.fullName" class="project-img">
+              </div>
+              <div class="project-content-right">
+                <h3 class="project-content-title">{{project.fullName}}</h3>
+                <small class="project-content-description">{{project.description}}</small>
+                <div class="technologies">
+                  @for (technology of project.technologies; track technology) {
+                    <small class="technology">{{technology}}</small>
+                  }
+                </div>
+                <a [href]="project.sourceCode">
+                  <small class="source-code">
+                    view code
+                  </small>
+                </a>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+      <div class="contact">
+        <h1 class="title">{{'titles.contact'|translate}}</h1>
+      </div>
+    </div>
