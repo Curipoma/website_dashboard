@@ -1,48 +1,38 @@
-@import "./src/assets/theme/inspired/theme";
-
-* {
-  border: none;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 0;
-  color: $primary-text-color;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  font-style: normal;
-  box-sizing: border-box;
-  word-break: break-word;
-  scroll-behavior: smooth;
-  background-color: transparent;
-}
+@forward "tailwindcss";
 
 body {
+  scroll-behavior: smooth;
   font-size: 16px;
   position: relative;
-  background: $secondary-bg-color;
-  background: $primary-bg-color-gradiant;
-  overflow: hidden;
   min-height: 100vh;
   height: 100%;
   width: 100vw;
 }
 
-.text-full-color {
-  background: linear-gradient(
-      90deg,
-      $primary-color 0%,
-      $secondary-color 100%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
+// enter animation
+
+.enter-component {
+  animation: enter-component-fade-in 300ms ease-in-out;
 }
 
-.line {
-  background: linear-gradient(
-      90deg,
-      $primary-color 0%,
-      $secondary-color 100%
-  );
-  height: 0.1rem;
-  width: 100%;
+@keyframes enter-component-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.leave-component {
+  animation: enter-component-fade-out 300ms ease-in-out;
+}
+
+@keyframes enter-component-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -1,0 +1,73 @@
+[
+  {
+    "fullName": "Emisión de Certificados",
+    "description": "Plataforma desarrollada para la Fundación Esquel que permite generar y entregar certificados digitales a estudiantes que completan cursos. El sistema automatiza la creación de certificados, gestiona la validación de datos y ofrece plantillas personalizables, reduciendo tiempo y errores en el proceso manual.",
+    "urlCover": "images/projects/project-1.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "Laravel",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "fullName": "Películas",
+    "description": "Aplicación web que muestra un extenso catálogo de películas con información detallada como sinopsis, géneros y calificaciones. Incluye funciones de búsqueda y filtrado dinámico, ofreciendo una experiencia de usuario fluida y moderna inspirada en plataformas de streaming.",
+    "urlCover": "images/projects/project-2.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "React"
+    ]
+  },
+  {
+    "fullName": "Aplicación móvil de música",
+    "description": "App móvil creada con Flutter que permite reproducir la música almacenada en el dispositivo. Incluye controles de reproducción (pausa, adelantar, retroceder), listas de reproducción y diseño intuitivo con soporte para modo oscuro, optimizada para un rendimiento fluido en Android e iOS.",
+    "urlCover": "images/projects/project-3.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "Dart",
+      "Flutter"
+    ]
+  },
+  {
+    "fullName": "Sistema de inventario",
+    "description": "Aplicación web desarrollada para la Fundación FAD que gestiona el inventario de productos y materiales. Incluye registro de entradas y salidas, generación de reportes, control de stock en tiempo real y un panel administrativo con filtros avanzados para facilitar la toma de decisiones.",
+    "urlCover": "images/projects/project-4.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "HTML",
+      "TypeScript",
+      "SCSS",
+      "Bootstrap",
+      "PrimeNG",
+      "PrimeFlex"
+    ]
+  },
+  {
+    "fullName": "Aplicación web de notas",
+    "description": "Aplicación ligera para crear, editar y eliminar notas personales desde el navegador. Pensada como un proyecto práctico para demostrar manejo del DOM, almacenamiento en el navegador y diseño responsivo, con una interfaz minimalista y clara.",
+    "urlCover": "images/projects/project-5.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
+    "fullName": "Aplicación web de portafolio",
+    "description": "Proyecto personal para mostrar experiencia y proyectos de desarrollo web. Incluye secciones de presentación, habilidades, proyectos destacados y contacto. Fue creado con buenas prácticas de diseño responsivo y optimización SEO, pensado para ser una carta de presentación profesional en línea.",
+    "urlCover": "images/projects/project-6.jpg",
+    "sourceCode": "https://github.com/Curipoma/",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ]
+  }
+]

@@ -1,43 +1,27 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { LoadingInitComponent } from "./layout/loading-init/loading-init.component";
-import { ChildrenOutletContexts } from "@angular/router";
-import { routeAnimationsOpacity } from "./animations/routeAnimationsOpacity";
+import { Component } from '@angular/core';
+import { BackgroundComponent } from '@shared/layout/background/background.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-root',
-    template: `
-    <app-background></app-background>
-<!--    <div *ngIf="isRender()" [@routeAnimations]="getRouteAnimationData()">-->
-      <router-outlet></router-outlet>
-<!--    </div>-->
+  selector: 'app-root',
+  template: `
+    <div class="content">
+      <router-outlet/>
+    </div>
+    <app-background/>
   `,
-    animations: [
-        routeAnimationsOpacity,
-    ],
-    standalone: false
+  host: {
+    '[animate.enter]': "'enter-component'",
+  },
+  styles: [
+    `
+      .content {
+        position: relative;
+        z-index: 3;
+      }
+    `,
+  ],
+  imports: [BackgroundComponent, RouterOutlet],
 })
-export class AppComponent implements OnInit {
-  constructor(
-    private contexts: ChildrenOutletContexts,
-    private viewContainerRef: ViewContainerRef,
-  ) {
-  }
-
-  ngOnInit(): void {
-    // this.loadingInit(LoadingInitComponent);
-    this.getRouteAnimationData();
-  }
-
-  // loadingInit(component: any) {
-  //   this.viewContainerRef.createComponent(component);
-  //   setTimeout(() => this.viewContainerRef.clear(), 2000);
-  // }
-
-  // isRender(): boolean {
-  //   return this.contexts.getContext('primary')?.route?.component != null;
-  // }
-
-  getRouteAnimationData() {
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
-  }
+export class AppComponent {
 }

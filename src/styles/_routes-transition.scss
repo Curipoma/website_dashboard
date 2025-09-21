@@ -1,0 +1,9 @@
+.background-transition {
+  view-transition-name: background-transition;
+  position: relative;
+  z-index: 2;
+}
+
+::view-transition-group(background-transition ) {
+  z-index: 2;
+}

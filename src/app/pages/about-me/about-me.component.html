@@ -1,0 +1,144 @@
+<!--  about -me-->
+<section class="py-16">
+  <div class="max-w-5xl mx-auto flex flex-col gap-4 px-4 py-12">
+
+    <!-- Nombre y rol -->
+    <div class="flex flex-col items-start gap-1">
+      <h3 class="text-5xl font-bold bg-gradient-to-r from-sky-600 to-orange-600 bg-clip-text text-transparent">
+        {{ "me.name" | translate }}
+      </h3>
+      <span class="text-gray-800 dark:text-gray-300">{{ "me.carer" | translate }}</span>
+    </div>
+
+    <!-- Descripción con foto -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <img
+        alt="me"
+        class="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-slate-900"
+        src="images/icons/me.png"
+      />
+      <p
+        class="text-gray-900 dark:text-gray-200 backdrop-blur-3xl bg-slate-900/5 shadow-md rounded-lg text-left text-lg md:text-base p-4">
+        {{ "me.description" | translate }}
+      </p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="hidden md:flex flex-row justify-end items-center gap-4 mt-4">
+      <a href="mailto:alvarocuripoma@gmail.com">
+        <small class="text-gray-900 dark:text-gray-100">alvarocuripoma&#64;gmail.com</small>
+      </a>
+      <a class="hover:scale-110 transition-transform" href="https://github.com/Curipoma/">
+        <img alt="github" class="w-8 h-8" src="images/icons/github-64.svg"/>
+      </a>
+      <a class="hover:scale-110 transition-transform" href="https://www.linkedin.com/in/alvaro-curipoma-713353229/">
+        <img alt="linkedin" class="w-8 h-8" src="images/icons/linkedin-96.svg"/>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--  Proyectos-->
+<section class="py-16">
+  <h1
+    class="text-5xl font-bold text-center text-slate-900 dark:text-slate-200 mb-12"
+  >
+    🔭 Mis Proyectos
+  </h1>
+  <div class="flex flex-col gap-12 max-w-6xl mx-auto">
+    @for (project of projects(); track project; let i = $index) {
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start gap-6 group backdrop-blur-3xl bg-slate-900/5 shadow-md rounded-lg p-10 rounded-lg shadow-lg">
+
+        <!-- Número grande -->
+        <span class="text-5xl font-extrabold text-purple-400 mr-4 hidden md:block">
+        {{ i + 1 }}
+      </span>
+
+        <!-- Imagen del proyecto -->
+        <div
+          class="w-48 h-32 md:w-64 md:h-40 rounded-xl overflow-hidden shadow-lg transform transition duration-500 group-hover:scale-105 group-hover:rotate-1">
+          <img
+            src="{{project.urlCover}}"
+            alt="{{project.fullName}}"
+            class="w-full h-full object-cover brightness-90 group-hover:brightness-110 transition"
+          />
+        </div>
+
+        <!-- Descripción y badges -->
+        <div class="flex-1 text-left">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200">{{ project.fullName }}</h3>
+          <p class="mt-2 line-clamp-3 text-gray-900 dark:text-gray-200">
+            {{ project.description }}
+          </p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            @for (tech of projects(); track tech) {
+              <span class="text-xs px-2 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+              {{ tech.technologies }}
+            </span>
+            }
+          </div>
+
+          <a
+            href="{{project.sourceCode}}"
+            target="_blank"
+            class="mt-2 inline-block text-blue-400 hover:underline"
+          >
+            Ver código
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<!--  stages-->
+<section class="py-16">
+  <h1
+    class="text-5xl font-bold text-center text-slate-900 dark:text-slate-200 mb-12"
+  >
+    Mi progreso
+  </h1>
+  <div class="max-w-4xl mx-auto px-4 py-12 backdrop-blur-3xl bg-slate-900/5 shadow-md rounded-lg">
+    <div class="relative border-l-2 border-purple-300 ml-4">
+      @for (stage of (stagesData().stages ?? []); track stage) {
+        <div class="mb-8 ml-6 relative">
+          <!-- Círculo del timeline -->
+          <span
+            class="absolute -left-5 top-0 w-4 h-4 rounded-full border-2 border-purple-700 bg-white"
+          ></span>
+
+          <!-- Contenido del stage -->
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+            <div>
+              <h3 class="text-xl font-semibold text-purple-800 dark:text-purple-200">{{ stage.title }}</h3>
+              <small class="text-purple-700 dark:text-purple-200">{{ stage.year }} - {{ stage.percentage }}</small>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 md:max-w-xl">{{ stage.description }}</p>
+          </div>
+
+          <!-- Barra de progreso -->
+          <div class="mt-2 h-2 bg-gray-200 rounded-full w-full md:w-1/2">
+            <div
+              class="h-2 bg-purple-700 rounded-full transition-all duration-500"
+              [style.width]="stage.percentage"
+            ></div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Barra total de progreso -->
+    <div class="mt-8">
+      <h4 class="text-lg font-semibold text-purple-700 dark:text-purple-200 mb-2">Progreso
+        total: {{ stagesData().currentStagePercentage }}</h4>
+      <div class="h-4 bg-gray-200 rounded-full w-full">
+        <div
+          [style.width]="stagesData().currentStagePercentage"
+          class="h-4 bg-purple-600 rounded-full transition-all duration-500"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>

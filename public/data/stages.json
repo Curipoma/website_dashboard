@@ -1,0 +1,30 @@
+{
+  "totalStagePercentage": "100%",
+  "currentStagePercentage": "75%",
+  "stages": [
+    {
+      "year": "2022",
+      "percentage": "20%",
+      "title": "Inicio en el desarrollo web",
+      "description": "Comencé a estudiar desarrollo web, aprendiendo fundamentos de HTML, CSS y JavaScript. Realicé pequeños proyectos personales para afianzar los conceptos básicos."
+    },
+    {
+      "year": "2023",
+      "percentage": "40%",
+      "title": "Consolidación de conocimientos",
+      "description": "Amplié mis habilidades trabajando con frameworks modernos como React y Laravel. Empecé a crear proyectos más completos como aplicaciones CRUD, sistemas básicos de gestión y consumo de APIs."
+    },
+    {
+      "year": "2024",
+      "percentage": "60%",
+      "title": "Proyectos profesionales y colaborativos",
+      "description": "Participé en proyectos reales como sistemas de inventario y emisión de certificados. Implementé buenas prácticas de arquitectura, diseño responsivo y trabajo en equipo usando Git y metodologías ágiles."
+    },
+    {
+      "year": "2025",
+      "percentage": "75%",
+      "title": "Especialización y portafolio avanzado",
+      "description": "Actualmente sigo desarrollando proyectos más complejos que integran tecnologías como Angular, NestJS y Flutter. Estoy enfocándome en arquitectura escalable, optimización de rendimiento y despliegue en la nube."
+    }
+  ]
+}
