@@ -154,3 +154,26 @@ $star-speed: 3s;
     opacity: 0;
   }
 }
+
+.nebula {
+  position: absolute;
+  z-index: 1;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1.75);
+  height: 100vh;
+  width: auto;
+
+  /* Animación de giro */
+  animation: spin 700s linear infinite;
+}
+
+/* Definición de la animación */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) scale(1.75) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.75) rotate(360deg);
+  }
+}
