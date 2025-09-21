@@ -1,0 +1,25 @@
+.enter-component {
+  animation: enter-component-fade-in 300ms ease-in-out;
+}
+
+@keyframes enter-component-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.leave-component {
+  animation: enter-component-fade-out 300ms ease-in-out;
+}
+
+@keyframes enter-component-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
